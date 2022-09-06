@@ -1,6 +1,7 @@
 .cart{
     display: flex;
     align-items: center;
+    cursor: pointer;
     &__icon{
         padding: 2px 5px 0 0;
         margin: 0 10px 0 0;
@@ -11,12 +12,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 15px;
+        font-size: 12px;
         position: absolute;
-        top: -4px;
+        top: 0px;
         right: -2px;
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         border-radius: 50%;
         background-color: rgb(255, 85, 85);
     } 
@@ -27,6 +28,61 @@
 
 .buttoncart{
     background-color: transparent;
+    display: block;
     border: none;
     color: #fff;
+    position: relative;
+}
+
+.cartmenu{
+    position: absolute;
+    z-index: 100;
+    top: 40px;
+    right: 0;
+    background-color: #333;
+    border-radius: 15px;
+    width: 400px;
+    padding: 15px 20px;
+    &__items{
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+    }
+    &__empty{
+        text-align: center;   
+    }
+    &__total{
+        padding: 15px 0 10px 0;
+        border-top: 2px solid rgba(255, 255, 255, 0.4);
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+    }
+}
+
+.gameincart{
+    margin: 0 0 15px 0;
+    &__body{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name{
+        font-size: 16px;
+    }
+    &__details{
+        display: flex;
+
+    }
+    &__price{
+        font-size: 16px;
+        padding: 0 5px 0 0;
+    }
+    &__delete{
+        button{
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+        }
+    }
 }

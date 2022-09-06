@@ -12,7 +12,7 @@ function Header() {
             <Link to="/" className={styles.header__title}>
                 Shevchik Games
             </Link>
-            <Cart summ={'2442'} inCart={inCart} />
+            <Cart />
         </div>
     </div>
 }

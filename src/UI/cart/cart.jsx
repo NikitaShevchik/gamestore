@@ -1,17 +1,27 @@
-import styles from './cart.module.scss'
+import styles from './cart.module.scss';
+import { useSelector } from 'react-redux';
+import CartMenu from './cartMenu';
+import { useState } from 'react';
 
-function Cart({ summ, inCart }) {
-    return <button className={styles.buttoncart}>
-        <div className={styles.cart}>
+function Cart() {
+    const items = useSelector(state => state.cart.itemsInCart);
+    const inCartGames = items.length;
+    const [miniCart, setMiniCart] = useState(false);
+
+    const totalPrice = items.reduce((acc, game) => acc += game.price, 0);
+
+    return <div className={styles.buttoncart} >
+        <div className={styles.cart} onClick={() => setMiniCart(!miniCart)}>
             <div className={styles.cart__icon}>
-                {inCart > 0 && <div className={styles.cart__incart}>{inCart}</div>}
+                {inCartGames > 0 && <div className={styles.cart__incart}>{inCartGames}</div>}
                 <i className='bx bx-cart'></i>
             </div>
             <div className={styles.cart__summ}>
-                {summ > 0 && `${summ} руб.`}
+                {totalPrice > 0 && `${totalPrice} руб.`}
             </div>
         </div>
-    </button>
+        {miniCart && <CartMenu items={items} totalPrice={totalPrice} />}
+    </div>
 }
 
 export default Cart;
