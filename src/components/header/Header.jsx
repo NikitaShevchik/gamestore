@@ -5,8 +5,6 @@ import styles from './Header.module.scss'
 import { Link } from 'react-router-dom'
 
 function Header() {
-    const [inCart, setInCart] = useState(1)
-
     return <div className={styles.header}>
         <div className={styles.header__body}>
             <Link to="/" className={styles.header__title}>

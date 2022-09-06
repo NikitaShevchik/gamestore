@@ -8,7 +8,7 @@ function GameInCart({ game }) {
 
     const handleClick = (e) => {
         e.stopPropagation();
-        dispatch(deleteItemFromCart(game))
+        dispatch(deleteItemFromCart(game.id))
     }
 
     return <div className={styles.gameincart}>
