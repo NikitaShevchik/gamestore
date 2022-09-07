@@ -20,7 +20,7 @@ function Cart() {
                 {totalPrice > 0 && `${totalPrice} руб.`}
             </div>
         </div>
-        {miniCart && <CartMenu items={items} totalPrice={totalPrice} />}
+        {miniCart && <CartMenu items={items} totalPrice={totalPrice} setMiniCart={setMiniCart} miniCart={miniCart} />}
     </div>
 }
 

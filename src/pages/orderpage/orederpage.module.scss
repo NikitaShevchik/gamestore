@@ -1,0 +1,51 @@
+.orderpage{
+    padding: 30px 0;
+    &__body{
+        display: flex;
+
+    }
+    &__games{
+        flex: 1 1 70%;
+    }
+    &__total{
+        margin: 0 0 0 50px;
+        flex: 1 1 30%;
+    }
+    &__empty{
+        font-size: 40px;
+        font-weight: 600;
+    }
+}
+
+.ordergame{
+    margin: 0 0 20px 0;
+    &__body{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__image{
+        padding: 0 30px 0 0;
+        img{
+            overflow: hidden;
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+    &__title{
+        flex: 1 1 auto;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    &__price{
+        font-size: 22px;
+        font-weight: 600;
+        button{
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            font-size: 26px;
+        }
+    }
+}

@@ -7,9 +7,10 @@ import {
 } from "react-router-dom";
 import Header from "./components/header/Header";
 import HomePage from "./pages/homepage/homepage";
-import GamePage from "./components/gamepage/gamepage";
+import GamePage from "./pages/gamepage/gamepage";
 import { Provider } from 'react-redux'
 import { store } from './redux'
+import OrderPage from "./pages/orderpage/orederpage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/app/:title" element={<GamePage />} />
+            <Route path="/order" element={<OrderPage />} />
           </Routes>
         </div>
       </Router >

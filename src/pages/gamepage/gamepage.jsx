@@ -7,8 +7,6 @@ import styles from './gamepage.module.scss'
 function GamePage() {
     const game = useSelector(state => state.game.currentGame);
 
-    // if (game) return null;
-
     return <div className={styles.gamepage}>
         <div className={styles.gamepage__title}>
             <span> {game.title}</span>
